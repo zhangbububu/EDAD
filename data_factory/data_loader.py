@@ -125,18 +125,6 @@ class SWATSegLoader(object):
 
         self.train = data
 
-        # r = 0.08
-        # print(f'Inject ratio {r} ==========================================>')
-        # for id, data in enumerate(self.train):
-        #     # data (dim, )
-        #     # r = 0.02, 0.05, 0.1
-        #     flag = 1 if np.random.rand() < 0.5 else -1
-        #     m = flag * (3 + np.random.randn(*data.shape))
-        #     mask = np.random.rand(*m.shape) < r 
-        #     m = mask * m
-
-        #     self.train[id] += m
-
 
         self.val = self.test
     
@@ -194,19 +182,6 @@ class PSMSegLoader(object):
 
         self.train = data
 
-        # np.random.seed(2021)
-        # r = 0.08
-        # print(f'Inject ratio {r} ==========================================>')
-        # for id, data in enumerate(self.train):
-        #     # data (dim, )
-        #     # r = 0.02, 0.05, 0.1
-        #     flag = 1 if np.random.rand() < 0.5 else -1
-        #     m = flag * (3 + np.random.randn(*data.shape))
-        #     mask = np.random.rand(*m.shape) < r 
-        #     m = mask * m
-
-        #     self.train[id] += m
-
 
 
         self.val = self.test
@@ -256,7 +231,7 @@ class MSLSegLoader(object):
         test_data = np.load(data_path + "/MSL_test.npy")
         self.test = self.scaler.transform(test_data)
         self.train = data
-        self.val = self.test # 验证集和测试集相同
+        self.val = self.test 
         self.test_labels = np.load(data_path + "/MSL_test_label.npy")
         print("test:", self.test.shape)
         print("train:", self.train.shape)

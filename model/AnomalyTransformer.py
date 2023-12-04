@@ -403,14 +403,12 @@ class AnomalyTransformer(nn.Module):
         for i in range(loop):
             
 
-            # 整个batch 共同错排
             # batch_size, sequence_length, feature_dim = z_q.size()
             # all_permutations = torch.randperm(sequence_length*batch_size).cuda()
             # z_q_shuffle = torch.gather(z_q, 1, all_permutations.unsqueeze(-1).expand(-1, -1, feature_dim))
             # z_q_shuffle = z_q.reshape(-1, feature_dim)[all_permutations].reshape(batch_size, sequence_length, feature_dim)
 
 
-            # 每行重新排列
             # torch
             batch_size, sequence_length, feature_dim = z_q.size()
             all_permutations = torch.stack([torch.randperm(sequence_length) for _ in range(batch_size)]).cuda()
