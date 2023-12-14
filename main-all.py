@@ -75,7 +75,6 @@ if __name__ == '__main__':
     parser.add_argument('--l_mi', type=float, default=1.)
     parser.add_argument('--l_cons', type=float, default=1.)
 
-
     seed = np.random.randint(0,10000000)
 
     config = parser.parse_args()
