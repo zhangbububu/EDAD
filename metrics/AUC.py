@@ -7,7 +7,6 @@ from metrics.evaluate_utils import find_length,range_convers_new
 
 def extend_postive_range(x, window=16):
     label = x.copy().astype(float)
-#     print(label)
     L = range_convers_new(label)  # index of non-zero segments
 #     print(L)
     length = len(label)
