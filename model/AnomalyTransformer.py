@@ -34,7 +34,7 @@ class EncoderLayer(nn.Module):
         # # y = self.dropout(self.conv2(y).transpose(-1, 1))
 
         # return self.norm2(x )
-
+# 
 ########################## origin ######################
         new_x = self.attention(
             x, x, x,

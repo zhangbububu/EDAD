@@ -1,5 +1,5 @@
-arch==6.2.0
 auto_mix_prep==0.2.0
+arch==6.2.0
 datasets==2.15.0
 hurst==0.0.5
 livelossplot==0.5.5
