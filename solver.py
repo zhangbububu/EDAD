@@ -311,9 +311,9 @@ class Solver(object):
 
         train_steps = len(self.train_loader)
 
-        with torch.no_grad():
-                self.model.critic_xz.mi_mode = 'test'
-                self.test()
+        # with torch.no_grad():
+        #         self.model.critic_xz.mi_mode = 'test'
+        #         self.test()
 
         for epoch in (range(self.num_epochs)):
             
@@ -629,22 +629,22 @@ class Solver(object):
 
         pred = (test_energy > thresh).astype(int)
 
-        st = 0
-        ed = 10
-        for index, i in enumerate(pred):
-            if i == 0 and test_labels[index] == 1:
-                st = max(0, index-200)
-                ed = min(len(pred)-1, index+200)
+        # st = 0
+        # ed = 10
+        # for index, i in enumerate(pred):
+        #     if i == 0 and test_labels[index] == 1:
+        #         st = max(0, index-200)
+        #         ed = min(len(pred)-1, index+200)
 
-        plt.plot(attens_energy[st:ed])
-        for index, i in enumerate(test_labels[st:ed]):
-            if i == 1 :
-                # print(index)
-                plt.axvline(index,color='red', alpha=0.5, linewidth=1) 
-                plt.axhline(thresh)
+        # plt.plot(attens_energy[st:ed])
+        # for index, i in enumerate(test_labels[st:ed]):
+        #     if i == 1 :
+        #         # print(index)
+        #         plt.axvline(index,color='red', alpha=0.5, linewidth=1) 
+        #         plt.axhline(thresh)
 
-        print(f'{st=},{ed=}, saved tmp{self.plot_cnt}.pnh')
-        plt.savefig('tmp'+str(self.plot_cnt)+'.png') 
+        # print(f'{st=},{ed=}, saved tmp{self.plot_cnt}.pnh')
+        # plt.savefig('tmp'+str(self.plot_cnt)+'.png') 
 
 
 

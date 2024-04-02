@@ -10,13 +10,23 @@ Series Anomaly Detection. We propose the EDAD framework for unsupervised anomaly
     pip install -r requirements.txt
     ```
 
-2. Before running EDAD, download the publicly available dataset from the link xxx, unzip it and place it in the /dataset directory.
+2. Before running EDAD, download the publicly available dataset from the [link](https://1drv.ms/f/s!AkhEmCUtJamUobN469La8ZF0d4Sbyw?e=cQcrut), unzip it and place it in the /dataset directory.
 
 
-
-3. Use the following command to run the algorithm. 
+4. Use the following command to run the algorithm. 
 
     ```bash
-    python main-all.py
+    python main-all.py --lr 0.0005 \
+    --input_c 25 \
+    --output_c 25 \
+    --dataset PSM \
+    --win_size 100 \
+    --d_model 512 \
+    --critic sep \
+    --batch_size 256 \
+    --l_intra_s 1 \
+    --l_intra_r 1 \
+    --l_mi 1 
     ```
 
+5. In order to run EDAD on other data sets, you need to prepare the data set and put it in the /dataset directory, and add the read operation of the data set in the dataloder.
