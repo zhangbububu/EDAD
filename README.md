@@ -1,5 +1,6 @@
 # EDAD
-
+This repository is the implementation of: An Encode-then-Decompose Approach for Unsupervised Time
+Series Anomaly Detection. We propose the EDAD framework for unsupervised anomaly detection and evaluate its performance on nine open-source datasets.
 
 
 ## Get Started
@@ -8,8 +9,12 @@
     ```bash
     pip install -r requirements.txt
     ```
-2. Download data from [Google Cloud](https://drive.google.com/drive/folders/1gisthCoE-RrKJ0j3KPV7xiibhHWT9qRm?usp=sharing). And put them in folder /dataset
-3. Run following  command.
+
+2. Before running EDAD, download the publicly available dataset from the link xxx, unzip it and place it in the /dataset directory.
+
+
+
+3. Use the following command to run the algorithm. 
 
     ```bash
     python main-all.py
