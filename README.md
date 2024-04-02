@@ -29,4 +29,4 @@ Series Anomaly Detection. We propose the EDAD framework for unsupervised anomaly
     --l_mi 1 
     ```
 
-5. In order to run EDAD on other data sets, you need to prepare the data set and put it in the /dataset directory, and add the read operation of the data set in the dataloder.
+5. In order to run EDAD on other data sets, you need to prepare the data set and put it in the /dataset directory, and add the read operation of the dataset in the dataloder.
