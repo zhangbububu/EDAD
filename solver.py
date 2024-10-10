@@ -10,7 +10,7 @@ import time
 from matplotlib import pyplot as plt
 import tqdm
 from utils.utils import *
-from model.AnomalyTransformer import AnomalyTransformer
+from model.EDAD import EDAD
 from data_factory.data_loader import get_loader_segment
 from torch.utils.tensorboard import SummaryWriter
 from metrics.metrics import *
@@ -148,7 +148,7 @@ class Solver(object):
         self.criterion = nn.MSELoss()
 
     def build_model(self):
-        self.model = AnomalyTransformer(win_size=self.win_size, enc_in=self.input_c, c_out=self.output_c,
+        self.model = EDAD(win_size=self.win_size, enc_in=self.input_c, c_out=self.output_c,
                                         d_model=self.d_model, d_ff=self.d_model, 
                                         n_heads=self.head, e_layers=3, method=self.method)
         self.teacher = deepcopy(self.model)

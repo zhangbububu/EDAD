@@ -312,10 +312,10 @@ class CriticFunc2(nn.Module):
 
         return re.squeeze(-1)
     
-class AnomalyTransformer(nn.Module):
+class EDAD(nn.Module):
     def __init__(self, win_size, enc_in, c_out, d_model=256, n_heads=8, e_layers=3, d_ff=512,
                  dropout=0.0, activation='gelu', output_attention=True, method='infomax', critic='sep'):
-        super(AnomalyTransformer, self).__init__()
+        super(EDAD, self).__init__()
 
         print(f'Create===>{d_model=}, {d_ff=}, {n_heads=}',)
 
