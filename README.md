@@ -1,6 +1,7 @@
 # EDAD
 This repository is the implementation of: An Encode-then-Decompose Approach for Unsupervised Time
 Series Anomaly Detection. We propose the EDAD framework for unsupervised anomaly detection and evaluate its performance on nine open-source datasets.
+
   [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)  [![PyTorch](https://img.shields.io/badge/PyTorch-2.4.1-blue)](https://pytorch.org/) 
 
 ## Get Started
